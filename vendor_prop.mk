@@ -97,7 +97,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.demo.hdmirotationlock=false \
 	ro.opengles.version=196610 \
 	ro.sf.lcd_density=480 \
-        vendor.display.enable_default_color_mode=1
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -109,6 +108,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
         persist.radio.data_ltd_sys_ind=1 \
         persist.radio.data_con_rprt=1 \
         persist.radio.calls.on.ims=1
+	sdm.debug.rotator_downscale=1 \
+	vendor.display.enable_default_color_mode=1
 
 # LED
 PRODUCT_PROPERTY_OVERRIDES += \
