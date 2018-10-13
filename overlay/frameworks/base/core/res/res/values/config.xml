@@ -450,4 +450,6 @@
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/app/Zenmotions/Zenmotions.apk</string>
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.asus.zenmotions.KeyHandler</string>
 </resources>
