@@ -71,6 +71,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
     private static final int GESTURE_SWIPE_DOWN = 256;
     private static final int GESTURE_SWIPE_LEFT = 257;
     private static final int GESTURE_SWIPE_RIGHT = 258;
+    private static final int GESTURE_DOUBLE_TAP = 260;
 
     // Slider
      private static final int KEYCODE_SLIDER_TOP = 601;
@@ -88,6 +89,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
 	GESTURE_SWIPE_DOWN,
 	GESTURE_SWIPE_LEFT,
 	GESTURE_SWIPE_RIGHT,
+        GESTURE_DOUBLE_TAP,
         KEYCODE_SLIDER_TOP,
         KEYCODE_SLIDER_MIDDLE,
         KEYCODE_SLIDER_BOTTOM
@@ -105,6 +107,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
 	GESTURE_SWIPE_DOWN,
 	GESTURE_SWIPE_LEFT,
 	GESTURE_SWIPE_RIGHT,
+        GESTURE_DOUBLE_TAP,
         KEY_DOUBLE_TAP
      };
 
@@ -248,6 +251,12 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
                 action = getGestureSharedPreferences()
                         .getString(ScreenOffGesture.PREF_GESTURE_RIGHT,
                         ActionConstants.ACTION_MEDIA_NEXT);
+                        doHapticFeedback();
+                break;
+            case GESTURE_DOUBLE_TAP:
+                action = getGestureSharedPreferences()
+                        .getString(ScreenOffGesture.PREF_GESTURE_DOUBLE_TAP,
+                        ActionConstants.ACTION_WAKE_DEVICE);
                         doHapticFeedback();
                 break;
     }
