@@ -34,6 +34,8 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := sdm660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno509
 
+EXTENDED_BUILD_TYPE := OFFICIAL
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -257,7 +259,7 @@ VENDOR_SECURITY_PATCH := 2018-08-01
 
 # SELinux
 include device/qcom/sepolicy/Android.mk
-#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
