@@ -64,7 +64,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 TARGET_KERNEL_CONFIG := X00TD_defconfig
 TARGET_KERNEL_VERSION := 4.4
-TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_CLANG_COMPILE := true
 #TARGET_KERNEL_CLANG_VERSION := 8.0.4
 
 # ANT+
@@ -200,7 +200,7 @@ TARGET_PROVIDES_KEYMASTER := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.aospos.hardware|$(DEVICE_PATH)/aosphw|**/*.java
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
