@@ -43,7 +43,7 @@ import android.service.notification.ZenModeConfig;
 import com.asus.zenmotions.settings.DeviceSettings;
 import com.asus.zenmotions.settings.ScreenOffGesture;
 import android.os.UserHandle;
-import com.android.internal.os.AlternativeDeviceKeyHandler;
+import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 import com.asus.zenmotions.util.ActionConstants;
 import com.asus.zenmotions.util.Action;
@@ -51,7 +51,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
 
-public class KeyHandler implements AlternativeDeviceKeyHandler {
+public class KeyHandler implements DeviceKeyHandler {
 
     private static final String TAG = KeyHandler.class.getSimpleName();
     private static final int GESTURE_REQUEST = 1;
